@@ -16,7 +16,7 @@ function checkFile(filepath) {
   var contents = fs.readFileSync(filepath, 'utf-8');
 
   Object.keys(strings).forEach(function(key) {
-    var target = 'translate(\'' + key + '\'';
+    var target = '\'' + key + '\'';
     if (~contents.indexOf(target)) {
       delete strings[key];
     }
